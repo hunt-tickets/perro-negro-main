@@ -34,7 +34,7 @@ const Tickets = () => {
       status: "EXCLUSIVO",
       features: [
         "Todo lo incluido en VIP",
-        "Mesa privada para 8 personas"
+        "Mesa privada para 10 personas"
       ],
       available: true,
       accent: "yellow-400"
