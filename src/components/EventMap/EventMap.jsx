@@ -58,10 +58,10 @@ const EventMap = () => {
                   Explora todas las zonas del evento y planifica tu experiencia perfecta
                 </p>
 
-                {/* Simple Map Button */}
+                {/* Simple Map Button - Hidden on mobile */}
                 <button
                   onClick={openModal}
-                  className="bg-perro-red text-white hover:bg-transparent hover:text-perro-red border-2 border-perro-red px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wider"
+                  className="hidden sm:inline-block bg-perro-red text-white hover:bg-transparent hover:text-perro-red border-2 border-perro-red px-8 py-4 text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wider"
                 >
                   VER MAPA COMPLETO
                 </button>
@@ -117,23 +117,25 @@ const EventMap = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="relative max-w-6xl w-full max-h-[90vh]"
+            className="relative w-full h-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute -top-4 -right-4 w-12 h-12 bg-white text-black rounded-full flex items-center justify-center font-bold text-xl hover:scale-110 transition-transform z-10 shadow-lg"
+              className="absolute top-4 right-4 w-12 h-12 bg-white text-black rounded-full flex items-center justify-center font-bold text-xl hover:scale-110 transition-transform z-10 shadow-lg"
             >
               ×
             </button>
             
-            {/* Map image */}
-            <img 
-              src={mapImageUrl}
-              alt="Mapa del evento Club Perro Negro - Vista completa"
-              className="w-full h-full object-contain rounded-lg shadow-2xl"
-            />
+            {/* Map image container */}
+            <div className="max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center">
+              <img 
+                src={mapImageUrl}
+                alt="Mapa del evento Club Perro Negro - Vista completa"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              />
+            </div>
           </motion.div>
         </motion.div>
       )}

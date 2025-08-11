@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 const Sponsors = () => {
   const sponsors = [
     {
-      name: "Espacio Patrocinador 1",
-      logo: null,
-      placeholder: true
+      name: "REC",
+      logo: "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/rec_logo.png"
     },
     {
       name: "Inside Entertainment", 
@@ -16,14 +15,12 @@ const Sponsors = () => {
       logo: "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//als_producciones.png"
     },
     {
-      name: "Espacio Patrocinador 3",
-      logo: null,
-      placeholder: true
+      name: "Biotickets",
+      logo: "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/biotickets_logo.png"
     },
     {
-      name: "Espacio Patrocinador 4", 
-      logo: null,
-      placeholder: true
+      name: "Touring", 
+      logo: "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/touring_logo.png"
     },
     {
       name: "Espacio Patrocinador 5",
@@ -49,13 +46,13 @@ const Sponsors = () => {
         <motion.div
           className="flex"
           animate={{
-            x: [0, -50 + '%']
+            x: [0, -100 + '%']
           }}
           transition={{
             x: {
               repeat: Infinity,
-              repeatType: "loop",
-              duration: 15,
+              repeatType: "loop", 
+              duration: 30,
               ease: "linear",
             },
           }}
@@ -79,6 +76,8 @@ const Sponsors = () => {
                   className={`object-contain opacity-60 filter grayscale ${
                     sponsor.name === "Inside Entertainment" 
                       ? "max-w-[80%] max-h-[80%]" 
+                      : sponsor.name === "Touring"
+                      ? "max-w-[180%] max-h-[180%]"
                       : "max-w-full max-h-full"
                   }`}
                 />
@@ -104,6 +103,8 @@ const Sponsors = () => {
                   className={`object-contain opacity-60 filter grayscale ${
                     sponsor.name === "Inside Entertainment" 
                       ? "max-w-[80%] max-h-[80%]" 
+                      : sponsor.name === "Touring"
+                      ? "max-w-[180%] max-h-[180%]"
                       : "max-w-full max-h-full"
                   }`}
                 />

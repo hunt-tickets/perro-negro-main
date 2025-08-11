@@ -17,7 +17,7 @@ const Tickets = () => {
     },
     {
       name: "VIP",
-      price: "100.000",
+      price: "85.000",
       currency: "COP",
       status: "LIMITADO",
       features: [
