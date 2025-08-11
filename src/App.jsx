@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import EventInfo from './components/EventInfo/EventInfo'
@@ -83,6 +84,7 @@ function App() {
       </div>
       <OfficialSite />
       <Footer />
+      <SpeedInsights />
     </div>
   )
 }
